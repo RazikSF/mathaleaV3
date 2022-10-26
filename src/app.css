@@ -144,6 +144,9 @@ input[type="radio"]:checked {
 888         "Y88P"  888  888  "Y888  "Y8888   88888P'
 */
 
+/* Lato */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 /* source-sans-pro-200 - latin */
 @font-face {
   font-family: "Source Sans Pro";
