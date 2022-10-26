@@ -11,21 +11,18 @@
     // isMenuOpen: false,
     // },
     tutoriels: {
-      titre: "Tutoriels",
+      titre: "Prise en main",
       id: "tutoriels",
       entrees: [
-        "Comment utiliser MathAléa",
+        // "Comment utiliser MathAléa",
         "Évaluations personnalisées",
         "Évaluations à la carte",
         "Exporter en PDF via LaTeX",
         "Exporter en Moodle",
-        "Créer un QCM de type AMC",
-        "Programmation de figures géométriques",
-        "Animations avec des instruments de géométrie",
-        "Outils pour le professeur",
+        "Créer un QCM de type AMC"
       ],
       actions: [
-        "https://coopmaths.fr/mathalea_tuto/",
+        // "https://coopmaths.fr/mathalea_tuto/",
         "https://coopmaths.fr/mathalea.html?v=alc",
         "https://coopmaths.fr/alacarte/",
         () => {
@@ -37,17 +34,28 @@
         () => {
           document.location.href = urlV2("amc")
         },
+      ],
+      isMenuOpen: false,
+    },
+    outils: {
+      titre: "Outils",
+      id: "outils",
+      entrees: [
+        "Programmation de figures géométriques",
+        "Animations avec des instruments de géométrie",
+        "Outils pour le professeur"
+      ],
+      actions: [
         "https://coopmaths.fr/mathalea2d.html",
         "https://coopmaths.fr/mathalea2iep.html",
-        "https://coopmaths.fr/mathalea.html?filtre=outils",
+        "https://coopmaths.fr/mathalea.html?filtre=outils"
       ],
       isMenuOpen: false,
     },
     referentiels: {
-      titre: "Coopmaths",
+      titre: "Classes",
       id: "classes",
-      // entrees: ["Sixième", "Cinquième", "Quatrième", "Troisième", "Seconde", "CRPE"],
-      entrees: ["Présentation", "Actualités", "Blog"],
+      entrees: ["Sixième", "Cinquième", "Quatrième", "Troisième", "Seconde", "CRPE"],
       actions: ["https://coopmaths.fr/6e", "https://coopmaths.fr/5e", "https://coopmaths.fr/4e", "https://coopmaths.fr/3e", "https://coopmaths.fr/2e", "https://coopmaths.fr/crpe"],
       isMenuOpen: false,
     },
@@ -121,19 +129,20 @@
       </button>
       <!-- logo -->
       <!-- <a href={"#"} class="inline-flex p-2 py-4 font-bold text-2xl font-logo1 text-white uppercase ">Coopmaths</a> -->
-      <a href={"#"} class="inline-flex p-2 py-4 font-bold text-2xl font-logo1 text-white"><span class="uppercase">Coopmaths</span></a>
+      <!-- <button type="button" on:click={toggleSideList}><i class="bx bx-menu-alt-left" /></button> -->
+      <a href={"#"} class="inline-flex p-2 px-3 py-4 font-bold text-2xl font-logo1 text-white"><span class="uppercase">Coopmaths</span></a>
     </div>
     <!-- menu -->
     <div class="flex flex-col mt-2 justify-end lg:inline-flex lg:grow lg:flex-row lg:mt-0 {isNavBarVisible ? 'flex' : 'hidden'}">
       <ul class="flex flex-col space-y-2 lg:flex-row lg:space-y-0">
-        <!-- <li>
-             <a href={"https://coopmaths.fr/calculmental/"} class="h-16 bg-coopmaths hover:bg-coopmaths-light text-white text-xl font-extrabold relative block py-4 px-4  items-center"><div style="padding-top:2px;"><span>Calcul mental</span><div></a>
-             </li> -->
-        <!-- <li>
-             <NavBarMenu {...menus.mathalea} bind:isNavBarVisible />
-             </li> -->
+        <li>
+          <a href={"/"} class="h-16 bg-coopmaths hover:bg-coopmaths-light text-white text-xl font-extrabold relative block py-4 items-center"><div style="padding-top:2px;"><span class="px-8">MathAléa</span><div></a>
+        </li>
         <li>
           <NavBarMenu {...menus.tutoriels} bind:isNavBarVisible />
+        </li>
+        <li>
+          <NavBarMenu {...menus.outils} bind:isNavBarVisible />
         </li>
         <li>
           <!-- <NavBarMenu {...menus.referentiels} bind:isNavBarVisible /> -->
