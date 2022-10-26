@@ -244,7 +244,7 @@
         id="exercice{indiceExercice}"
       >
         <article class="text-2xl lg:text-base">
-          <div class="text-right text-orange-600 text-xs mt-2">
+          <div class="text-right text-teal-600 text-xs mt-2">
             {#if columnsCount > 1}
               <button
                 type="button"
@@ -335,8 +335,8 @@
       </div>
       <div
         class="bg-gray-100 {isSettingsVisible
-          ? 'visible lg:w-1/4'
-          : 'hidden lg:w-0'} flex flex-col duration-500"
+                           ? 'visible lg:w-1/4'
+                           : 'hidden lg:w-0'} flex flex-col duration-500"
       >
         {#if isSettingsVisible}
           <Settings {exercice} on:settings={handleNewSettings} />

@@ -316,7 +316,7 @@
     <div class="flex flex-row items-center justify-center w-full mb-24 mt-12">
       <button
         type="button"
-        class="inline-flex items-center justify-center shadow-2xl w-1/3 bg-coopmaths hover:bg-coopmaths-dark text-[100px] font-extrabold text-white py-6 px-12 rounded-lg"
+        class="inline-flex items-center justify-center shadow-2xl w-1/3 bg-coopmaths hover:bg-coopmaths-dark text-[100px] font-extrabold text-white py-6 px-6 rounded-lg"
         on:click={() => {
           goToQuestion(0)
         }}
@@ -324,7 +324,8 @@
           goToQuestion(0)
         }}
       >
-        Play <i class="bx text-[100px] text-white bx-play" />
+        <!-- Démarrer -->
+        <i class="bx text-[200px] text-white bx-play" />
       </button>
     </div>
     <div class="flex flex-row w-full justify-center items-start mx-20">
@@ -564,8 +565,8 @@
           type="button"
           class="m-2 text-coopmaths"
           on:click={() => {
-            document.location.href = document.location.href.replace("&v=diaporama", "")
-          }}
+                   document.location.href = document.location.href.replace("&v=diaporama", "")
+                   }}
         >
           <i class="bx text-[100px] bx-home-alt-2" />
         </button>
@@ -575,13 +576,13 @@
 {/if}
 
 <style>
-  .table-wrp {
-    max-height: 300px;
-    overflow-y: auto;
-    display: block;
-  }
-  thead {
-    position: sticky;
-    top: 0;
-  }
+ .table-wrp {
+   max-height: 300px;
+   overflow-y: auto;
+   display: block;
+ }
+ thead {
+   position: sticky;
+   top: 0;
+ }
 </style>

@@ -38,10 +38,10 @@
   }
 </script>
 
-<!-- 
+<!--
   @component
   Barre de titre et d'actions au-dessus d'un exercice
-  
+
   Utilisation :
     ```tsx
   const headerExerciceProps = {
@@ -59,7 +59,7 @@
 
 <div class="z-0 flex-1 overflow-hidden">
   <h1
-    class="border-b border-gray-300 text-orange-600 pl-4 mt-4 pb-2 flex flex-col lg:flex-row lg:justify-between lg:items-center"
+    class="border-b border-gray-300 text-teal-600 pl-4 mt-4 pb-2 flex flex-col lg:flex-row lg:justify-between lg:items-center"
   >
     <div
       class="flex flex-col lg:flex-row lg:justify-start lg:items-center"
@@ -140,7 +140,7 @@
           data-tip="Supprimer l'exercice"
           type="button"
           on:click={remove}><i class="bx bx-trash ml-2" /></button
-        >
+                                                          >
       {/if}
       {#if isSortable}
         <BoutonMonter indice={indiceExercice} />

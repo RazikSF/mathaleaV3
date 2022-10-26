@@ -6,20 +6,33 @@ const config = {
     extend: {
       colors: {
         coopmaths: {
-          DEFAULT: '#F15929',
-          lightest: '#FF8C5C',
-          light: '#FF7343',
-          dark: '#D84010',
-          darkest: '#BE2600'
+          DEFAULT: '#469597',
+          ultralight: '#f8f7f8',
+          lightest: '#E5E3E4',
+          // light: '#DDBEAA',
+          light: '#5BA199',
+          dark: '#205b6c',
+          darkest: '#205b6c'
         }
       },
-
       fontFamily: {
-        sans: ['"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
-        beba: '"Bebas Neue"'
+        sans: ['"Lato"', ...defaultTheme.fontFamily.sans],
+        // logo1: 'neoretrodrawregular',
+        logo1: 'Lato',
+        logo2: 'geometry_soft_probold_n',
+        logo3: '"Fredoka One"',
+        logo4: '"Bebas Neue"',
+        logo5: '"Frente H1"',
+        logo6: 'colortuberegular',
+        logo7: '"Cabin Sketch"',
+        logo8: '"Fredericka the Great"',
+        logo9: 'jelleebold',
+        logo10: '"League Gothic Condensed"',
+        logo11: '"FFF Tusj"',
+        logo12: 'Days'
       },
       transitionProperty: {
-        width: 'width'
+     ^   width: 'width'
       }
     }
   },
@@ -30,7 +43,7 @@ const config = {
     themes: [
       {
         mytheme: {
-          primary: '#F15929',
+          primary: '#7F00FF',
           secondary: '#FF8C5C',
           accent: '#D84010',
           neutral: '#191D24',
@@ -48,7 +61,7 @@ const config = {
     // Pour les tooltips
     require('@tailwindcss/forms'),
     // Pour ???
-    plugin(function ({ addUtilities }) {
+    plugin(function({ addUtilities }) {
       addUtilities({
         '.scrollbar-hide': {
           /* IE and Edge */
