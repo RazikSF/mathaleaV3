@@ -19,19 +19,21 @@
         "Outils pour le professeur",
       ],
       actions: [
-        "/",
         "https://coopmaths.fr/mathalea_tuto/",
+        "https://coopmaths.fr/mathalea.html?v=alc",
+        "https://coopmaths.fr/alacarte/",
         () => {
           document.location.href = urlV2("latex")
         },
         () => {
           document.location.href = urlV2("moodle")
         },
+        () => {
+          document.location.href = urlV2("amc")
+        },
         "https://coopmaths.fr/mathalea2d.html",
         "https://coopmaths.fr/mathalea2iep.html",
         "https://coopmaths.fr/mathalea.html?filtre=outils",
-        "/",
-        "/",
       ],
       isMenuOpen: false,
     },
@@ -113,7 +115,7 @@
       </button>
       <!-- logo -->
       <!-- <a href={"#"} class="inline-flex p-2 py-4 font-bold text-2xl font-logo1 text-white uppercase ">Coopmaths</a> -->
-      <a href={"#"} class="inline-flex p-2 py-4 font-bold text-2xl font-logo1 text-white"><span class="uppercase">Coopmaths&nbsp;&nbsp;&nbsp;</span> <span style="color: #E5E3E4;"> >&nbsp;&nbsp; MathAléa</span></a>
+      <a href={"#"} class="inline-flex p-2 py-4 font-bold text-2xl font-logo1 text-white"><span class="uppercase">Coopmaths</span></a>
     </div>
     <!-- menu -->
     <div class="flex flex-col mt-2 justify-end lg:inline-flex lg:grow lg:flex-row lg:mt-0 {isNavBarVisible ? 'flex' : 'hidden'}">

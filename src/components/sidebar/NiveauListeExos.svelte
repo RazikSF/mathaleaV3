@@ -35,10 +35,10 @@
   }
 </script>
 
-<!-- 
+<!--
   @component
-  Écrire la liste des exercices disponibles 
-  à partir des entrées de l'arbre du référentiel 
+  Écrire la liste des exercices disponibles
+  à partir des entrées de l'arbre du référentiel
   convertion du fichier `referentiel2022.json`.
 
   Paramètres :
@@ -49,15 +49,15 @@
   - **nestedLevelCount** : compteur pour connaître le nombre d'imbrication (utilisé pour l'indentation de la ligne) class="pl-{nestedLevelCount * 2}"
  -->
 <div
-  class="flex flex-row items-center justify-between {expanded ? 'bg-gray-300' : 'bg-gray-200'} font-bold text-coopmaths  hover:bg-gray-100 hover:text-coopmaths-light cursor-pointer"
+  class="flex flex-row items-center justify-between font-bold text-coopmaths hover:bg-gray-100 hover:text-coopmaths-light cursor-pointer"
   style="padding-left: {(nestedLevelCount * 2) / 4}rem"
   on:click={toggleContent} on:keydown={toggleContent}
 >
   <div class="text-base">{levelTitle} <span class="font-normal">{themeTitle(levelTitle)}</span></div>
-  <i class=" text-xl bg-transparent bx {expanded ? 'bx-plus rotate-[225deg]' : 'bx-plus'} transition-transform duration-500 ease-in-out" />
+  <i class=" text-xl bx {expanded ? 'bx-plus rotate-[225deg]' : 'bx-plus'} transition-transform duration-500 ease-in-out" />
 </div>
 {#if expanded}
-  <ul transition:slide={{ duration: 500 }}>
+  <ul class="bg-coopmaths-lightest" transition:slide={{ duration: 500 }}>
     {#each Array.from(items, ([key, obj]) => ({ key, obj })) as item}
       <li>
         {#if item.obj.has("uuid")}

@@ -233,7 +233,7 @@
         </div>
       </aside>
       <!-- drag bar -->
-      <div id="dragbar" class="flex w-[4px] bg-coopmaths-lightest hover:bg-coopmaths-lightest hover:cursor-col-resize" on:mousedown={startResizing.bind(this, "moving")} />
+      <!-- <div id="dragbar" class="flex w-[4px] bg-coopmaths-lightest hover:bg-coopmaths-lightest hover:cursor-col-resize" on:mousedown={startResizing.bind(this, "moving")} /> -->
     {/if}
     <!-- content -->
     {#if $exercicesParams.length !== 0}
@@ -244,13 +244,15 @@
           </div>
         {/if}
         {#if $displayOptions.v !== "l"}
-          <div class="flex flex-row justify-center items-center space-x-2 text-slate-500">
+          <div class="flex flex-row justify-center items-center space-x-2 text-slate-500 py-4">
+              <!-- <span class="uppercase text-[20px] px-2">Exports</span> -->
+              <div class="bg-coopmaths-lightest p-2">
               <button
                   type="button"
                   class="hover:text-coopmaths-dark"
                   title="Nouvelles données"
                   on:click={newDataForAll} >
-                  <span class="text-[24px]" px-1><i class="fa-solid fa-arrows-rotate"></i></span>
+                  <span class="text-[22px] px-1"><i class="fa-solid fa-arrows-rotate"></i></span>
             </button>
             <!-- <button type="button" class="hover:text-coopmaths-dark"><i class="bx bx-sm bx-code-curly" /></button> -->
             <button
@@ -262,7 +264,7 @@
                   params.v = "diaporama"
                   return params
                 })}>
-                <span class="text-[24px]" px-1><i class="fab-sharp fa-solid fa-display"></i></span>
+                <span class="text-[22px] px-1"><i class="fab-sharp fa-solid fa-display"></i></span>
             </button>
             <button
                 type="button"
@@ -272,7 +274,7 @@
                          document.location.href = urlV2('latex')
                          }}>
                 <!-- <span class="text-gray-600 text-[24px]">/ LaTeX / </span> -->
-                <span class="text-[24px]" px-1><i class="fab-sharp fa-solid fa-file-pdf"></i></span>
+                <span class="text-[22px] px-1"><i class="fab-sharp fa-solid fa-file-pdf"></i></span>
                 <!-- <i class="bx bx-sm bx-file" /> -->
             </button>
             <button
@@ -283,7 +285,7 @@
                          document.location.href = urlV2('moodle')
                          }}>
                 <!-- <span class="text-gray-600 text-[24px]">Moodle / </span> -->
-                <span class="text-[24px]" px-1><i class="fab-sharp fa-solid fa-building-columns"></i></span>
+                <span class="text-[22px] px-1"><i class="fab-sharp fa-solid fa-building-columns"></i></span>
                 <i class="bx bx-sm bx-graduation" />
             </button>
             <button
@@ -294,7 +296,7 @@
                          document.location.href = urlV2('amc')
                          }}>
                 <!-- <span class="text-gray-600 text-[24px]">QCM / </span> -->
-                <span class="text-[24px]"><i class="fab-sharp fa-solid fa-list-check"></i></span>
+                <span class="text-[22px] px-1"><i class="fab-sharp fa-solid fa-list-check"></i></span>
                 <!-- <i class="bx bx-sm bx-select-multiple" /> -->
             </button>
             <button
@@ -306,7 +308,7 @@
                              params.v = "l"
                              return params
                          })}>
-                <span class="text-[24px]" px-1><i class="fa-solid fa-expand"></i></span>
+                <span class="text-[22px] px-1"><i class="fa-solid fa-expand"></i></span>
             </button>
             <button
                 type="button"
@@ -316,9 +318,10 @@
                          $exercicesParams.length = 0
                          }}>
                 <!-- <i class="bx text-white bx-sm bx-trash" /> -->
-                <span class="text-[24px] px-1"><i class="fab-sharp fa-solid fa-trash-can"></i></span>
+                <span class="text-[22px] px-1"><i class="fab-sharp fa-solid fa-trash-can"></i></span>
             </button>
-          </div>
+              </div>
+              </div>
         {/if}
         <div class="flex-1 overflow-y-scroll overscroll-auto">
           {#each $exercicesParams as paramsExercice, i (paramsExercice)}
@@ -331,7 +334,7 @@
     {:else}
       <!-- <div class="flex flex-col text-slate-400 px-10 py-10"> -->
       <div class="flex-1 flex flex-col p-6 overflow-hidden h-full" style="color: #777777;">
-          <h1 style="color: #469597; font-size: 36px; text-align: center;">Bienvenue sur Coopmaths !</h1>
+          <h1 style="color: #469597; font-size: 36px; text-align: center;" class="py-4">Bienvenue sur Coopmaths !</h1>
       <div class="text-[18px]">
           <p class=" px-10 py-5">Vous pouvez sélectionner des exercices en cliquant sur leur intitulé via l'arborescence ci-contre ou les recherchant par thème ou par identifiant.</p>
           <p class="px-10">À chaque fois qu'un exercice est sélectionné, il vient s'ajouter à la liste des précédents sur cette partie droite de l'écran, en lieu et place du texte que vous lisez présentement.</p>

@@ -80,7 +80,7 @@ import { exercicesParams } from "../store"
  -->
 <div class="relative flex flex-row items-center text-sm text-gray-600 bg-gray-400 ml-{nestedLevelCount * 2}">
   <div class="flex-1 hover:bg-coopmaths-lightest cursor-pointer" on:click={addToList} on:keydown={addToList}>
-    <div class="ml-[3px] pl-2 bg-gray-200 hover:bg-gray-100 flex-1">
+    <div class="ml-[3px] pl-2 bg-coopmaths-lightest hover:bg-gray-100 flex-1">
       {#if exercice.has('lieu')}
       <span class="font-bold">{exercice.get('typeExercice').toUpperCase()} {exercice.get('annee')} - {exercice.get('lieu')} - {exercice.get('numeroInitial')}</span>
         <div>

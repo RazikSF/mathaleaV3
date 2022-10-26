@@ -18,8 +18,8 @@ const config = {
       fontFamily: {
         sans: ['"Lato"', ...defaultTheme.fontFamily.sans],
         // logo1: 'neoretrodrawregular',
-        logo1: 'Lato',
-        logo2: 'geometry_soft_probold_n',
+        logo1: '"Lato"',
+        logo2: '"geometry_soft_probold_n"',
         logo3: '"Fredoka One"',
         logo4: '"Bebas Neue"',
         logo5: '"Frente H1"',
@@ -29,10 +29,11 @@ const config = {
         logo9: 'jelleebold',
         logo10: '"League Gothic Condensed"',
         logo11: '"FFF Tusj"',
-        logo12: 'Days'
+        logo12: 'Days',
+        beba: '"Bebas Neue"'
       },
       transitionProperty: {
-     ^   width: 'width'
+        width: 'width'
       }
     }
   },
