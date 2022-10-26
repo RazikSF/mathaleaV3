@@ -4,9 +4,15 @@
   import NavBarMenu from "./NavBarMenu.svelte"
   let isNavBarVisible = false
   const menus = {
-    mathalea: {
-      titre: "MathAléa",
-      id: "mathalea",
+    // mathalea: {
+    // titre: "MathAléa",
+    // id: "mathalea",
+    // actions: ["/"],
+    // isMenuOpen: false,
+    // },
+    tutoriels: {
+      titre: "Tutoriels",
+      id: "tutoriels",
       entrees: [
         "Comment utiliser MathAléa",
         "Évaluations personnalisées",
@@ -123,8 +129,11 @@
         <!-- <li>
              <a href={"https://coopmaths.fr/calculmental/"} class="h-16 bg-coopmaths hover:bg-coopmaths-light text-white text-xl font-extrabold relative block py-4 px-4  items-center"><div style="padding-top:2px;"><span>Calcul mental</span><div></a>
              </li> -->
+        <!-- <li>
+             <NavBarMenu {...menus.mathalea} bind:isNavBarVisible />
+             </li> -->
         <li>
-          <NavBarMenu {...menus.mathalea} bind:isNavBarVisible />
+          <NavBarMenu {...menus.tutoriels} bind:isNavBarVisible />
         </li>
         <li>
           <!-- <NavBarMenu {...menus.referentiels} bind:isNavBarVisible /> -->

@@ -334,7 +334,7 @@
     {:else}
       <!-- <div class="flex flex-col text-slate-400 px-10 py-10"> -->
       <div class="flex-1 flex flex-col p-6 overflow-hidden h-full" style="color: #777777;">
-          <h1 style="color: #469597; font-size: 36px; text-align: center;" class="py-4">Bienvenue sur Coopmaths !</h1>
+          <h1 style="color: #469597; font-size: 36px; text-align: center;" class="py-4">Bienvenue sur MathAléa !</h1>
       <div class="text-[18px]">
           <p class=" px-10 py-5">Vous pouvez sélectionner des exercices en cliquant sur leur intitulé via l'arborescence ci-contre ou les recherchant par thème ou par identifiant.</p>
           <p class="px-10">À chaque fois qu'un exercice est sélectionné, il vient s'ajouter à la liste des précédents sur cette partie droite de l'écran, en lieu et place du texte que vous lisez présentement.</p>
